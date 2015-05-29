@@ -12,6 +12,10 @@ namespace QuadWebApi
         public static HttpConfiguration Configure()
         {
             var config = new HttpConfiguration();
+           
+            /*config.Routes.MapHttpRoute(
+          name: "BreezeApi",
+          routeTemplate: "breeze/{controller}/{action}");
 
             config.Routes.MapHttpRoute(
                  name: "DefaultRoute",
@@ -20,7 +24,7 @@ namespace QuadWebApi
              );
 
             config.Routes.MapHttpRoute(name: "DefaultApi", routeTemplate: "api/{controller}/{action}");
-
+            */
             //Configure ninject resolver.
             config.DependencyResolver = new NinjectWebApiResolver(NinjectWebApiConfig.CreateKernel());
 
